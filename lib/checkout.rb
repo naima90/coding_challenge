@@ -20,12 +20,14 @@ class Checkout
 
   def total_price
     price = 0
-    lavender, cufflinks = [], []
+    lavender, cufflinks, tshirt = [], [], []
     @basket.map do |item| 
       if item == "Lavender heart"
         lavender << item
       elsif item == "Personalised cufflinks"
         cufflinks << item
+      elsif item == "Kids T-shirt"
+        tshirt << item
       end
     end
     if lavender.length >= 2
@@ -35,6 +37,9 @@ class Checkout
     end
     if cufflinks
       price += (cufflinks.length * 45.00)
+    end
+    if tshirt
+      price += (tshirt.length * 19.95)
     end
     price
   end

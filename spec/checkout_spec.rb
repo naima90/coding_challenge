@@ -21,6 +21,13 @@ describe Checkout do
     expect(subject.total_price).to eq(54.25)
   end
 
+   it "should be able to return the price of 3 different items" do
+    subject.scan("Lavender heart")
+    subject.scan("Personalised cufflinks")
+    subject.scan("Kids T-shirt")
+    expect(subject.total_price).to eq(74.20)
+  end
+
   it "shouldn't be able to scan products that aren't available" do
     expect(subject.scan("Apple")).to eq("Product's not available")
   end
