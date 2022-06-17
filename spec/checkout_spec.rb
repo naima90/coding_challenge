@@ -25,7 +25,7 @@ describe Checkout do
     subject.scan("Lavender heart")
     subject.scan("Personalised cufflinks")
     subject.scan("Kids T-shirt")
-    expect(subject.total_price).to eq(74.20)
+    expect(subject.total_price).to eq(66.78)
   end
 
   it "shouldn't be able to scan products that aren't available" do

@@ -41,7 +41,11 @@ class Checkout
     if tshirt
       price += (tshirt.length * 19.95)
     end
-    price
+    if price > 60.00
+      price -= (price * 10 / 100)
+    else 
+      price
+    end
   end
 
 end
