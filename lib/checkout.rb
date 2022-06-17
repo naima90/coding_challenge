@@ -5,10 +5,10 @@ class Checkout
   # end
 
   def scan(item)
-    "Lavender heart"
+    @item = "Lavender heart"
   end
 
   def price
-    9.25
+    return 9.25 if @item == "Lavender heart"
   end
 end

@@ -5,6 +5,7 @@ describe Checkout do
   end
 
   it "should be able to return the price of scanned item" do
+    subject.scan("Lavender heart")
     expect(subject.price).to eq(9.25)
   end
 end
